@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #d8e6f3, #f4f7fb);
+}
+
+.container {
+  width: 900px;
+  max-width: 95%;
+  margin: 0 auto;
+  background: #fdfdfd;
+  border: 3px solid #2f3b52;
+  box-shadow: 0 0 0 2px #aab7c4 inset, 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 18px 20px 22px;
+}
+
+h2 {
+  font-size: 38px;
+  margin: 10px 0 25px;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px 26px;
+  align-items: start;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #243447;
+  font-weight: 600;
+}
+
+input,
+select {
+  height: 30px;
+  border: 2px solid #4f6272;
+  background: #ffffff;
+  padding: 4px 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #1f2937;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  color: #8a97a6;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1d72b8;
+  box-shadow: 0 0 0 3px rgba(29, 114, 184, 0.15);
+}
+
+input[type="file"] {
+  padding: 0;
+  height: auto;
+  border: 0;
+  background: transparent;
+  color: #1f2937;
+}
+
+select {
+  cursor: pointer;
+}
+
+input.error,
+select.error {
+  border-color: #c62828;
+  background: #fff5f5;
+}
+
+.error-message {
+  min-height: 16px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #c62828;
+}
+
+.buttons {
+  grid-column: span 3;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+button {
+  min-width: 95px;
+  height: 32px;
+  border: 2px solid #2f3b52;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0 #8aa0b5;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.btn-cancel {
+  background: #f2f4f7;
+  color: #243447;
+}
+
+.btn-cancel:hover {
+  background: #dde3ea;
+}
+
+.btn-submit {
+  background: #1d72b8;
+  color: white;
+}
+
+.btn-submit:hover {
+  background: #155d96;
+}
+
+@media (max-width: 780px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    grid-column: span 1;
+    justify-content: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+}
